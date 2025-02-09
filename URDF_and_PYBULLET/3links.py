@@ -29,7 +29,6 @@ for j in range(numJoints):
 joint_friction_id = p.addUserDebugParameter("jointFriction", 0, 10, 0)
 joint_torque_id = p.addUserDebugParameter("joint_torque", -20, 20, -0.105)
 
-# p.setJointMotorControl2(robotId, 1, p.VELOCITY_CONTROL, force=0)
 p.changeDynamics(robotId, 1, localInertiaDiagonal=[0.0, 0.0, (1/3)*5*0.3])
 
 for i in range (100000000):
